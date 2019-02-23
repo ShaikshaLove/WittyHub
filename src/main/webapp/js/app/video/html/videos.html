@@ -1,0 +1,29 @@
+
+<div style="margin-top: 50px" id="items" class="album py-5 bg-light">
+	<div class="container" ng-controller="VideoController">
+		<div ng-show="myValue">
+			<app-root>
+			<div class="centered">
+				<div class="loader">Loading...</div>
+			</div>
+			</app-root>
+		</div>
+		
+		
+		<div class="row">
+			<div class="col-md-4" ng-repeat="video in videos">
+				<div class="card mb-4 shadow-sm">
+					<div class="embed-responsive embed-responsive-16by9">
+						<iframe class="embed-responsive-item"
+							src="http://localhost:8085/videos/{{product.imageName}}"" allowfullscreen></iframe>
+					</div>
+					<div class="card-body bg-light">
+						<p>{{video.description}}</p>
+					</div>
+				</div>
+
+			</div>
+
+		</div>
+	</div>
+</div>
